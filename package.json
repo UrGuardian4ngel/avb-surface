@@ -1,0 +1,24 @@
+{
+  "name": "avb-surface",
+  "description": "An application that allows you to link your MOTU AVB mixer with a physical surface over HTTP",
+  "author": "Michaël Jacobs <michael.jacobs92@gmail.com>",
+  "main": "lib/index.js",
+  "jsnext:main": "src/index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "flow-bin": "^0.74.0",
+    "flow-typed": "^2.4.0"
+  },
+  "scripts": {
+    "build": "babel -d lib/ src/",
+    "flow": "flow check",
+    "prepublish": "yarn run build",
+    "start": "node ./lib/index.js"
+  },
+  "private": true
+}
