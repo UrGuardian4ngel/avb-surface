@@ -5,6 +5,10 @@
   "main": "lib/index.js",
   "jsnext:main": "src/index.js",
   "license": "MIT",
+  "dependencies": {
+    "react": "^16.4.1",
+    "react-reconciler": "^0.11.0"
+  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
@@ -12,7 +16,8 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "flow-bin": "^0.74.0",
-    "flow-typed": "^2.4.0"
+    "flow-typed": "^2.4.0",
+    "react-devtools-core": "^3.2.3"
   },
   "scripts": {
     "build": "babel -d lib/ src/",
