@@ -1,0 +1,40 @@
+declare module 'midi' {
+/*@fixme Fix why Flow doesn't accept `MidiInput & MidiBus`;
+  declare type MidiBus = {
+    getPortCount(): number;
+    getPortName(port: number): string;
+    openPort(port: number): void;
+    openVirtualPort(port: string): void;
+   closePort(): void;
+  }
+*/
+
+  declare export type MidiInput = {
+    on(name: string, listener: Function): void;
+    addListener(name: string, listener: Function): void;
+    removeListener(name: string, listener: Function): void;
+
+    // Shared MidiBus methods.
+    getPortCount(): number;
+    getPortName(port: number): string;
+    openPort(port: number): void;
+    openVirtualPort(port: string): void;
+    closePort(): void;
+  } // & events$EventEmitter
+
+  declare export type MidiOutput = {
+    sendMessage(message: Array<number>): void;
+
+    // Shared MidiBus methods.
+    getPortCount(): number;
+    getPortName(port: number): string;
+    openPort(port: number): void;
+    openVirtualPort(port: string): void;
+    closePort(): void;
+  }
+
+  declare function input(): MidiInput;
+  declare function output(): MidiOutput;
+
+  declare function createReadStream(input?: MidiInput): stream$Readable;
+}

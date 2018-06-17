@@ -5,3 +5,5 @@ export interface IControlSurface {
 
   sendMessage(message: Array<number>): void;
 }
+
+export { default as HUIControlSurface } from './HUIControlSurface';

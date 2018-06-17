@@ -6,6 +6,7 @@
   "jsnext:main": "src/index.js",
   "license": "MIT",
   "dependencies": {
+    "midi": "^0.9.5",
     "react": "^16.4.1",
     "react-reconciler": "^0.11.0"
   },
